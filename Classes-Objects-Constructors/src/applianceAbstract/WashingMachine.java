@@ -6,6 +6,7 @@ public class WashingMachine extends Appliance {
 		this.brand = brand;
 		this.powerConsumption= powerConsumption;
 	}
+	
 	@Override
 	public void turnOn() {
 		System.out.println("Brand of Washing Machine is "+brand+".");

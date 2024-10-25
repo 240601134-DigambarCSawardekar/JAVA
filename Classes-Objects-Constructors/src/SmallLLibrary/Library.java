@@ -1,36 +1,26 @@
 package SmallLLibrary;
 
-public class Library {
-	Book book1;
-	Book book2;
-	Book book3;
+import java.util.ArrayList;
 
-public void addBook1(Book book) {
-	this.book1 = book;
-}
-
-public void addBook2(Book book) {
-	this.book2 = book;
-}
-
-public void addBook3(Book book) {
-	this.book3 = book;
-}
+	public class Library {
+		Book book;
+		
 	
+		ArrayList <Book> Books = new ArrayList<Book>();
 	
-public void displayBooks() {
-        if (book1 != null) {
-            book1.displayInfo();
-        }
-        System.out.println();
-        if (book2 != null) {
-            book2.displayInfo();
-        }
-        System.out.println();
-        if (book3 != null) {
-            book3.displayInfo();
-        }
-
-	
+	public void setBook(Book book) {
+			this.book = book;
+			}
+	public void addBook(Book book) {
+		Books.add(book);
 	}
+		
+	
+	public void displayBooks() {
+		for(Book book: Books) {
+			System.out.println("For Book Title "+book.title+" Author is "+book.author.getName()+".");
+		}
+		
+        }	
 }
+
